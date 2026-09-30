@@ -1,0 +1,49 @@
+site_name: "Proyecto Intermodular 2026/27"
+site_description: "Proyecto Intermodular del Ciclo Formativo de Desarrollo de aplicaciones Web"
+site_author: "Alumno Aníbal"
+
+nav:
+  - PRACTICA 01 - DOCUMENTACIÓN DEL PROYECTO MI_SITIO CON HERD: practica01.md
+
+# Selección del tema Read the Docs
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - php
+    - bash
+    - json
+    - html
+  features:
+    - content.code.copy
+
+# Estructura de navegación lateral
+nav:
+  - Inicio: index.md
+
+# Opciones adicionales
+markdown_extensions:
+  - tables
+  - codehilite
+  - pymdownx.superfences
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.mark
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+  - pymdownx.arithmatex
+  - pymdownx.blocks.admonition
+  - pymdownx.magiclink
+  - pymdownx.keys
+  - pymdownx.highlight
+  - pymdownx.blocks.definition
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+  - js/copy-button.js
+
+extra_css:
+  - css/estilo.css
