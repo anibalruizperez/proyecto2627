@@ -18,25 +18,25 @@
 
 ![Git instalado](img/practica01-1.png)
 
-![Versión de Git](practica01-1-2.png)
+![Versión de Git](img/practica01-1-2.png)
 
 ### GitHub CLI instalado y configurado
 
-![Github auth status](practica01-2.png)
+![Github auth status](img/practica01-2.png)
 
 ### Herd instalado con la versión de PHP 8.4
 
-![Herd PHP version](practica01-3.png)
+![Herd PHP version](img/practica01-3.png)
 
 ### Repositorio "Mi_sitio" clonado en local
 
-![Repositorio local Mi_sitio](practica01-4.png)
+![Repositorio local Mi_sitio](img/practica01-4.png)
 
 ### Herd enlazado al repositorio "Mi_sitio" y sirviéndolo en HTTPS
 
-![Repositorio en Herd](practica01-5.png)
+![Repositorio en Herd](img/practica01-5.png)
 
-![Herd sirviendo el repositorio](practica05-2.png)
+![Herd sirviendo el repositorio](img/practica01-5-2.png)
 
 Como apartado final, hay que redactar un resumen de los elementos y plugin de "ReadtheDocs" usados. 
 
