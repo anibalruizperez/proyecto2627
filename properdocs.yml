@@ -19,7 +19,7 @@ theme:
 
 # Estructura de navegación lateral
 nav:
-  - Practica: practica01.md
+  - Practica 01 - Documentación Mi_sitio: practica01.md
 
 # Opciones adicionales
 markdown_extensions:
