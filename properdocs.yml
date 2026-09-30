@@ -20,6 +20,7 @@ theme:
 # Estructura de navegación lateral
 nav:
   - Inicio: index.md
+  - Practica: practica01.md
 
 # Opciones adicionales
 markdown_extensions:
