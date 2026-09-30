@@ -2,16 +2,6 @@
 
 ---
 
-- Git instalado y configurado en local
-
-- GitHub CLI instalado y configurado (gh auth status).
-
-- Herd instalado con la versión de PHP 8.4.
-
-- repositorio "misitio" clonado en local
-
-- Herd enlazado al repositorio "misitio" y sirviéndolo en  HTTPS.
-
 ## 1. Validación de la instalación del entorno de desarrollo
 
 ### Git instalado y configurado en local
@@ -38,7 +28,6 @@
 
 ![Herd sirviendo el repositorio](img/practica01-5-2.png)
 
-Como apartado final, hay que redactar un resumen de los elementos y plugin de "ReadtheDocs" usados. 
 
 ## 2. Elementos, plugins y extensiones usadas
 
