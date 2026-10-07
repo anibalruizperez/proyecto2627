@@ -20,7 +20,7 @@ theme:
 # Estructura de navegación lateral
 nav:
   - Practica 01 - Documentación Mi_sitio: practica01.md
-
+  - Practica 02 - Formularios POST: practica02.md
 # Opciones adicionales
 markdown_extensions:
   - tables
