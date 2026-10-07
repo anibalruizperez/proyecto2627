@@ -4,6 +4,7 @@ site_author: "Alumno Aníbal"
 
 nav:
   - PRACTICA 01 - DOCUMENTACIÓN DEL PROYECTO MI_SITIO CON HERD: practica01.md
+  - PRACTICA 02 - FORMULARIOS POST PHP: practica01.md
 
 # Selección del tema Read the Docs
 theme:
@@ -20,7 +21,8 @@ theme:
 # Estructura de navegación lateral
 nav:
   - Practica 01 - Documentación Mi_sitio: practica01.md
-  - Practica 02 - Formularios POST: practica02.md
+  - Practica 02 - Formularios POST PHP: practica02.md
+
 # Opciones adicionales
 markdown_extensions:
   - tables
