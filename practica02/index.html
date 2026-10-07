@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Alumno Aníbal" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Practica 02 - Formularios POST PHP - Proyecto Intermodular 2026/27</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/estilo.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var properdocs_page_name = "Practica 02 - Formularios POST PHP";
+        var properdocs_page_input_path = "practica02.md";
+        var properdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/php.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/json.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/html.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Proyecto Intermodular 2026/27
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../practica01/">Practica 01 - Documentación Mi_sitio</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Practica 02 - Formularios POST PHP</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1-front-end-ut02p02html">1. Front-end (UT02P02.html)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#codigo-formularios">Código formularios</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-back-end-ut02p02php">2. Back-end (UT02P02.php)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#codigo-php">Código php</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Proyecto Intermodular 2026/27</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Practica 02 - Formularios POST PHP</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="practica-02-creacion-de-formularios-y-recogida-de-valores-por-post">PRÁCTICA 02: Creación de formularios y recogida de valores por POST</h1>
+<hr />
+<h2 id="1-front-end-ut02p02html">1. Front-end (UT02P02.html)</h2>
+<p>En la parte de cliente se muestra un formulario donde el usuario debe introducir su sueldo, que debe ser mayor a 1000, y su puesto, el cual puede ser base, directivo o alto cargo.</p>
+<h3 id="codigo-formularios">Código formularios</h3>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"es"</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"viewport"</span> <span class="na">content</span><span class="o">=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">@</span><span class="k">import</span><span class="w"> </span><span class="s2">"https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"</span><span class="p">;</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">"stylesheet"</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://unpkg.com/axios/dist/axios.min.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>UT02P02<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">"title"</span><span class="p">&gt;</span>Calculadora de aumentos<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">"formulario_sueldos"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span> <span class="na">action</span><span class="o">=</span><span class="s">"UT02P02.php"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span>
+            <span class="na">class</span><span class="o">=</span><span class="s">"input is-link"</span> <span class="err">;</span>
+            <span class="na">type</span><span class="o">=</span><span class="s">"text"</span>
+            <span class="na">placeholder</span><span class="o">=</span><span class="s">"Escribe tu sueldo"</span>
+            <span class="na">name</span><span class="o">=</span><span class="s">"sueldo"</span>
+            <span class="na">required</span> <span class="p">/&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">"puesto"</span><span class="p">&gt;</span>Elige tu puesto:<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">"puesto"</span> <span class="na">name</span><span class="o">=</span><span class="s">"puesto"</span> <span class="na">required</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">""</span> <span class="na">disabled</span> <span class="na">selected</span><span class="p">&gt;</span>Selecciona un valor<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">"base"</span><span class="p">&gt;</span>Base<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">"directivo"</span><span class="p">&gt;</span>Directivo<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">"altocargo"</span><span class="p">&gt;</span>Alto cargo<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">class</span><span class="o">=</span><span class="s">"button is-link"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Enviar"</span> <span class="p">/&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="2-back-end-ut02p02php">2. Back-end (UT02P02.php)</h2>
+<p>En la parte del servidor se recoge por post tanto el valor de sueldo como el del puesto y los almacena en variables. Después en base al puesto se calcula su complemento, que será de un 10% el del puesto base, un 15% el del puesto directivo y de un 20% el del puesto alto cargo.</p>
+<p>Por último devuelve por pantalla el valor del sueldo final.</p>
+<h3 id="codigo-php">Código php</h3>
+<div class="highlight"><pre><span></span><code><span class="x">&lt;!DOCTYPE html&gt;</span>
+<span class="x">&lt;html lang="es"&gt;</span>
+
+<span class="x">&lt;head&gt;</span>
+<span class="x">    &lt;meta charset="UTF-8"&gt;</span>
+<span class="x">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span>
+
+<span class="x">    &lt;style&gt;</span>
+<span class="x">        @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";</span>
+<span class="x">    &lt;/style&gt;</span>
+
+<span class="x">    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;</span>
+
+<span class="x">    &lt;script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"&gt;&lt;/script&gt;</span>
+<span class="x">    &lt;script src="https://unpkg.com/axios/dist/axios.min.js"&gt;&lt;/script&gt;</span>
+
+<span class="x">    &lt;title&gt;UT02P02&lt;/title&gt;</span>
+<span class="x">&lt;/head&gt;</span>
+
+<span class="x">&lt;body&gt;</span>
+<span class="x">    </span><span class="cp">&lt;?php</span>
+    <span class="nv">$sueldo</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'sueldo'</span><span class="p">]</span> <span class="o">??</span> <span class="mi">1200</span><span class="p">;</span>
+    <span class="nv">$puesto</span> <span class="o">=</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">'puesto'</span><span class="p">]</span> <span class="o">??</span> <span class="s2">"base"</span><span class="p">;</span>
+    <span class="nv">$complemento</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">echo</span> <span class="s2">"Tu sueldo es: </span><span class="si">$sueldo</span><span class="s2"> €&lt;br&gt;"</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"Tu puesto es: </span><span class="si">$puesto</span><span class="s2"> &lt;br&gt;"</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$puesto</span> <span class="o">==</span> <span class="s2">"base"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$complemento</span> <span class="o">=</span> <span class="p">(</span><span class="nx">int</span><span class="p">)</span><span class="nv">$sueldo</span> <span class="o">*</span> <span class="mf">0.10</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$puesto</span> <span class="o">==</span> <span class="s2">"directivo"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$complemento</span> <span class="o">=</span> <span class="p">(</span><span class="nx">int</span><span class="p">)</span><span class="nv">$sueldo</span> <span class="o">*</span> <span class="mf">0.15</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="nv">$puesto</span> <span class="o">==</span> <span class="s2">"altocargo"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$complemento</span> <span class="o">=</span> <span class="p">(</span><span class="nx">int</span><span class="p">)</span><span class="nv">$sueldo</span> <span class="o">*</span> <span class="mf">0.20</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nv">$sueldo</span> <span class="o">=</span> <span class="p">(</span><span class="nx">int</span><span class="p">)</span><span class="nv">$sueldo</span> <span class="o">+</span> <span class="nv">$complemento</span><span class="p">;</span>
+
+    <span class="k">echo</span> <span class="s2">"Tu sueldo final más los complementos es: </span><span class="si">$sueldo</span><span class="s2"> €"</span>
+    <span class="cp">?&gt;</span>
+
+<span class="x">    &lt;br&gt;</span>
+
+<span class="x">&lt;/body&gt;</span>
+
+<span class="x">&lt;/html&gt;</span>
+</code></pre></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../practica01/" class="btn btn-neutral float-left" title="Practica 01 - Documentación Mi_sitio"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://properdocs.org/">ProperDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../practica01/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script src="../js/copy-button.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
